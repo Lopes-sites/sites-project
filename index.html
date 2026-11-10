@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfólio de sites</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #faf5ed; --ink: #2d2226; --muted: #7e6b6f; --line: #e3d7cf; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "DM Sans", system-ui, sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 96px 24px; }
+  h1 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 400; font-size: clamp(44px, 7vw, 72px); line-height: 1; margin: 0 0 16px; }
+  p.lead { color: var(--muted); font-size: 17px; margin: 0 0 56px; }
+  ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  li a { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 28px 0; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
+  li a:hover .name { color: #b74739; }
+  .name { font-family: "Cormorant Garamond", Georgia, serif; font-size: 34px; transition: color .2s; }
+  .desc { color: var(--muted); font-size: 14px; text-align: right; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Portfólio de sites</h1>
+  <p class="lead">Projetos desenvolvidos a partir de designs no Figma, fiéis ao layout em desktop e mobile.</p>
+  <ul>
+    <li><a href="aura/"><span class="name">Aura — Estúdio de beleza</span><span class="desc">Landing page com chat de atendimento</span></a></li>
+  </ul>
+</main>
+</body>
+</html>
