@@ -7,6 +7,7 @@ Portfólio de sites estáticos (HTML, CSS e JS, sem build). Cada site fica em um
 | [`aura/`](aura/) | Aura — Estúdio de beleza |
 | [`clara/`](clara/) | Clara — Dermatologia |
 | [`colchoes-terra/`](colchoes-terra/) | Colchões Terra — Móveis para alojamento de obra |
+| (externo) [dprrevestimentos.com.br](https://www.dprrevestimentos.com.br/) | DPR Revestimentos — Marmoraria. Site de cliente em produção (Next.js, repositório próprio); aqui só o card e as capturas |
 
 ## Publicação
 Publicado pela Vercel a partir deste repositório: cada push na `main` atualiza o site. Como não tem build, na Vercel use o preset **Other**, sem comando de build e com a raiz do projeto como diretório de saída.
