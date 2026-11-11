@@ -15,3 +15,4 @@ Publicado pela Vercel a partir deste repositório: cada push na `main` atualiza 
 1. Crie uma pasta com o site (ex.: `novo-site/index.html`).
 2. Gere as capturas em `assets/previews/`: `novo-site-desktop.jpg` (página inteira, 960px de largura) e `novo-site-mobile.jpg` (390×844).
 3. No `index.html` da raiz, copie o bloco `<a class="card">` do Aura, troque link, imagens e textos e atualize o contador de projetos.
+  
