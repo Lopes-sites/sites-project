@@ -52,8 +52,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 /* Hero */
 .hero { text-align: center; padding-top: 42px; }
 .hero-kicker { font-size: 18px; line-height: 24px; font-weight: 600; }
-.hero h1 { margin-top: 18px; font-size: 71px; line-height: 74px; font-weight: 600; letter-spacing: -0.045em; }
-.hero-lead { margin-top: 32px; font-size: 21px; line-height: 32px; color: var(--gray); }
+.hero h1 { margin-top: 20px; font-size: 70.6px; line-height: 74px; font-weight: 600; letter-spacing: -0.045em; }
+.hero-lead { margin-top: 30px; font-size: 21px; line-height: 32px; color: var(--gray); }
 .hero-actions { margin-top: 23px; display: flex; justify-content: center; align-items: center; gap: 29px; padding-right: 24px; }
 .btn-lg { height: 52px; font-size: 16px; }
 .hero-actions .btn { width: 218px; }
@@ -72,9 +72,9 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .feature-text { padding: 43px 0 0 56px; }
 .feature .eyebrow { color: #b9b9c1; }
 .feature h3 { margin-top: 28px; font-size: 54px; line-height: 56px; font-weight: 600; letter-spacing: -0.035em; }
-.feature-p { margin-top: 35px; font-size: 19px; line-height: 29px; color: var(--soft); }
-.feature .link { display: inline-block; margin-top: 64px; font-size: 17px; }
-.feature-img img { width: 100%; height: 100%; object-fit: cover; }
+.feature-p { margin-top: 35px; font-size: 19px; line-height: 29.5px; color: var(--soft); }
+.feature .link { display: inline-block; margin-top: 65px; font-size: 17px; }
+.feature-img picture { display: block; height: 100%; } .feature-img img { width: 100%; height: 100%; object-fit: cover; }
 .duo { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .tile { border-radius: 28px; overflow: hidden; text-align: center; display: flex; flex-direction: column; }
 .tile-light { background: #fff; }
@@ -83,7 +83,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .tile h3 { font-size: 36px; line-height: 46px; font-weight: 600; letter-spacing: -0.035em; }
 .tile p { margin-top: 23px; font-size: 17px; line-height: 26px; color: var(--gray); }
 .tile-dark p { color: var(--soft); }
-.tile .link { display: inline-block; margin-top: 38px; font-size: 16px; }
+.tile .link { display: inline-block; margin-top: 38px; font-size: 15.7px; }
 .tile img { width: 100%; height: 218px; object-fit: cover; }
 .care .note { margin-top: 31px; }
 
@@ -120,10 +120,10 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .note-sm { margin-top: 38px; font-size: 13px; }
 
 /* FAQ */
-.faq { padding: 52px 0 58px; }
+.faq { padding: 52px 0 56px; }
 .faq .h2 { font-size: 48px; }
 .sub-sm { margin-top: 24px; font-size: 15px; line-height: 22px; }
-.faq-list { max-width: 960px; margin: 24px auto 0; }
+.faq-list { max-width: 960px; margin: 26px auto 0; }
 .faq-item { border-bottom: 1px solid var(--line); }
 .faq-q { width: 100%; min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; text-align: left; font-size: 18px; line-height: 24px; font-weight: 600; padding: 12px 0; }
 .faq-q i { position: relative; flex: none; width: 13px; height: 13px; margin-right: 22px; }
@@ -148,7 +148,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .place { margin-top: 5px; background: #fff; color: var(--ink); border-radius: 28px; padding: 30px 28px 42px; height: 540px; }
 .place h3 { font-size: 30px; line-height: 36px; font-weight: 500; letter-spacing: -0.02em; }
 .place .eyebrow { margin-top: 18px; font-size: 11px; }
-.place h4 { margin-top: 30px; } .place h4 ~ h4 { margin-top: 31px; font-size: 17px; line-height: 22px; font-weight: 600; }
+.place h4 { margin-top: 30px; font-size: 17px; line-height: 22px; font-weight: 600; } .place h4 ~ h4 { margin-top: 31px; }
 .place h4 + p { margin-top: 12px; font-size: 17px; line-height: 26px; color: var(--gray); }
 .place-note { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 14px; line-height: 21px; color: var(--gray); }
 .cta-foot { margin-top: 47px; font-size: 14px; color: #b5b5bc; }
@@ -214,15 +214,15 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   .care .sub { margin-top: 20px; }
   
   .chips { flex-wrap: wrap; gap: 9px 12px; margin-top: 16px; }
-  .chips li { font-size: 13.5px; }
+  .chips li { font-size: 13.3px; }
   .chips .c1 { width: calc((100% - 12px) * .473); } .chips .c2 { width: calc((100% - 12px) * .527); } .chips .c3 { width: 232px; }
 
   .feature { margin-top: 16px; display: block; height: auto; border-radius: 20px; }
-  .feature-text { padding: 27px 24px 0; height: 280px; }
+  .feature-text { padding: 27px 24px 0; height: 284px; }
   .feature h3 { margin-top: 20px; font-size: 32.3px; line-height: 34px; }
   .feature-p { margin-top: 18px; font-size: 16px; line-height: 24px; }
   .feature .link { margin-top: 27px; font-size: 14.7px; }
-  .feature-img img { height: 210px; object-position: 70% 40%; }
+  .feature-img img { height: 206px; }
   .duo { grid-template-columns: 1fr; gap: 19px; margin-top: 20px; }
   .tile { border-radius: 22px; }
   .tile-text { height: auto; padding: 29px 24px 26px; }
@@ -280,10 +280,10 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   .msg { margin-top: 26px; padding: 22px 20px 26px; }
   .msg-text { margin-top: 16px; font-size: 16px; line-height: 24px; }
   .place { margin-top: 22px; height: auto; padding: 31px 20px 28px; }
-  .place h3 { font-size: 26.5px; } .place h4 + p { font-size: 16px; line-height: 24px; }
+  .place h3 { font-size: 26.5px; } .place h4 + p { margin-top: 11px; font-size: 16px; line-height: 24px; }
   .place .eyebrow { margin-top: 22px; }
-  .place h4 { margin-top: 25px; } .place h4 ~ h4 { margin-top: 28px; }
-  .place-note { margin-top: 25px; padding-top: 21px; }
+  .place h4 { margin-top: 25px; } .place h4 ~ h4 { margin-top: 29px; }
+  .place-note { margin-top: 26px; padding-top: 21px; }
   .place-note br { display: none; }
   .cta-foot { margin-top: 26px; font-size: 13px; line-height: 20px; }
 
