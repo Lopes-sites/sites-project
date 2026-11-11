@@ -1,0 +1,303 @@
+/* ============================================================
+   CORES DO SITE
+   Tiradas do próprio logo da Colchões Terra (o globo azul,
+   os continentes amarelos e a faixa vermelha), para o cliente
+   reconhecer a marca dele, só que com acabamento moderno.
+   ============================================================ */
+:root {
+  --azul:     #1B3F94;  /* azul do globo: cor principal */
+  --azul-esc: #12285E;  /* azul escuro: fundos e textos fortes */
+  --amarelo:  #F6C21A;  /* amarelo dos continentes: botões de ação */
+  --vermelho: #C8262C;  /* vermelho da faixa: só em detalhes pequenos */
+  --concreto: #ECEEF1;  /* cinza claro: fundos de apoio */
+  --aco:      #5A6472;  /* cinza aço: textos secundários */
+  --tinta:    #16203A;  /* texto principal */
+  --branco:   #FFFFFF;
+
+  --largura: 1180px;
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--branco);
+  color: var(--tinta);
+  font-family: "Archivo", system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+/* Títulos: Archivo estreita e pesada */
+h1, h2, h3 {
+  font-stretch: 72%;
+  font-weight: 800;
+  line-height: 1.02;
+  margin: 0 0 .45em;
+  letter-spacing: -0.005em;
+}
+h1 { font-size: clamp(2.6rem, 6.4vw, 5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: 1.3rem; font-stretch: 85%; font-weight: 700; line-height: 1.2; }
+p  { margin: 0 0 1em; max-width: 64ch; }
+a  { color: var(--azul); }
+img { max-width: 100%; display: block; }
+
+:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 3px; }
+
+.container { max-width: var(--largura); margin: 0 auto; padding: 0 16px; }
+section { padding: 96px 0; }
+.intro { color: var(--aco); font-size: 1.15rem; }
+
+/* ---------- Botões ---------- */
+.botao {
+  display: inline-flex; align-items: center; gap: .55em;
+  padding: .9em 1.5em;
+  border-radius: 4px;           /* cantos quase retos: visual de obra, não de app */
+  font: inherit; font-weight: 700; font-size: 1rem;
+  text-decoration: none; cursor: pointer;
+  border: 2px solid transparent;
+  transition: background .15s ease, color .15s ease;
+}
+.botao svg { width: 1.25em; height: 1.25em; flex-shrink: 0; }
+.botao-amarelo { background: var(--amarelo); color: var(--azul-esc); }
+.botao-amarelo:hover { background: #FFD43B; }
+.botao-contorno { border-color: currentColor; color: inherit; background: transparent; }
+.botao-contorno:hover { background: rgba(255,255,255,.12); }
+
+/* ============================================================
+   FAIXA DE CONTATO (topo) + CABEÇALHO
+   ============================================================ */
+.faixa-contato { background: var(--azul-esc); color: #C9D3EC; font-size: .9rem; }
+.faixa-contato .container { display: flex; justify-content: space-between; gap: 8px 24px; flex-wrap: wrap; padding-top: 8px; padding-bottom: 8px; }
+.faixa-contato a { color: var(--branco); text-decoration: none; font-weight: 600; }
+.faixa-contato .telefones { display: flex; gap: 22px; flex-wrap: wrap; }
+
+.topo {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--branco);
+  border-bottom: 1px solid var(--concreto);
+}
+.topo .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 76px; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--azul-esc); }
+.logo img { height: 52px; width: auto; }
+.logo span { font-stretch: 75%; font-weight: 800; font-size: 1.45rem; line-height: 1; }
+.logo small { display: block; font-stretch: 100%; font-weight: 500; font-size: .78rem; color: var(--aco); margin-top: 3px; }
+.menu { display: flex; gap: 28px; }
+.menu a { color: var(--tinta); text-decoration: none; font-weight: 600; }
+.menu a:hover { color: var(--azul); }
+.topo .botao { padding: .7em 1.2em; }
+
+/* ============================================================
+   HERO: foto real de um alojamento montado pela Terra
+   ============================================================ */
+.hero {
+  position: relative;
+  color: var(--branco);
+  padding: 120px 0 72px;
+  /* A foto vem do site atual deles. O degradê azul por cima deixa o texto legível. */
+  background:
+    linear-gradient(90deg, rgba(18,40,94,.94) 0%, rgba(18,40,94,.82) 45%, rgba(18,40,94,.25) 100%),
+    url("https://storage.googleapis.com/wzukusers/user-31423073/images/5a6f680c21c70XGEkfBm/015.JPG") center / cover no-repeat;
+}
+.hero h1 { max-width: 14ch; }
+.hero p.sub { font-size: 1.25rem; color: #DCE3F5; max-width: 52ch; }
+.hero .acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+
+/* Fatos rápidos embaixo do hero, numa régua com divisórias */
+.fatos {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  margin: 80px 0 0; padding: 0; list-style: none;
+  border-top: 1px solid rgba(255,255,255,.25);
+}
+.fatos li { padding: 20px 20px 0 0; font-size: .98rem; color: #DCE3F5; }
+.fatos li + li { padding-left: 20px; border-left: 1px solid rgba(255,255,255,.25); }
+.fatos strong { display: block; color: var(--branco); font-stretch: 80%; font-size: 1.35rem; font-weight: 800; line-height: 1.2; margin-bottom: 4px; }
+
+/* ============================================================
+   CATÁLOGO POR ÁREA DO CANTEIRO (abas)
+   ============================================================ */
+.catalogo { background: var(--branco); }
+.abas {
+  display: flex; gap: 4px; flex-wrap: wrap;
+  margin: 36px 0 0;
+  border-bottom: 3px solid var(--azul-esc);
+}
+.aba {
+  font: inherit; font-weight: 700; font-stretch: 85%; font-size: 1.1rem;
+  padding: .75em 1.3em;
+  border: 0; border-radius: 4px 4px 0 0;
+  background: var(--concreto); color: var(--tinta);
+  cursor: pointer;
+}
+.aba:hover { background: #DDE2EA; }
+.aba[aria-selected="true"] { background: var(--azul-esc); color: var(--branco); }
+
+.painel { padding-top: 40px; }
+.painel[hidden] { display: none; }
+.painel-topo { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center; margin-bottom: 40px; }
+.painel-topo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 4px; }
+.painel-topo p { color: var(--aco); }
+
+/* Grade de produtos: foto, nome e especificação técnica */
+.produtos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px 24px; }
+.produto img {
+  width: 100%; aspect-ratio: 1; object-fit: contain;
+  background: var(--branco); border: 1px solid var(--concreto); border-radius: 4px;
+  padding: 8px; margin-bottom: 14px;
+}
+.produto h3 { font-size: 1.12rem; margin-bottom: .3em; }
+.produto p { font-size: .93rem; color: var(--aco); margin: 0; }
+.grupo-titulo { font-size: 1.5rem; margin: 48px 0 20px; padding-top: 28px; border-top: 1px solid var(--concreto); }
+.grupo-titulo:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+
+/* ============================================================
+   CALCULADORA DO ALOJAMENTO (parte interativa)
+   ============================================================ */
+.calculadora { background: var(--azul-esc); color: var(--branco); }
+.calculadora .container { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: start; }
+.calculadora .intro { color: #C9D3EC; }
+.campo { margin-bottom: 28px; }
+.campo > label, .campo legend { display: block; font-weight: 700; margin-bottom: 10px; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Campo do número de trabalhadores, com botões de - e + */
+.contador { display: inline-flex; align-items: stretch; border: 2px solid #3B5498; border-radius: 4px; overflow: hidden; }
+.contador button {
+  width: 52px; font: inherit; font-size: 1.5rem; font-weight: 700;
+  background: #1C3672; color: var(--branco); border: 0; cursor: pointer;
+}
+.contador button:hover { background: #26448A; }
+.contador input {
+  width: 110px; text-align: center;
+  font: inherit; font-stretch: 75%; font-size: 2.2rem; font-weight: 800;
+  background: transparent; color: var(--branco); border: 0; padding: 6px 0;
+  -moz-appearance: textfield;
+}
+.contador input::-webkit-outer-spin-button,
+.contador input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+.opcoes { display: flex; flex-wrap: wrap; gap: 8px; }
+.opcoes input { position: absolute; opacity: 0; pointer-events: none; }
+.opcoes label {
+  padding: .55em 1.1em; border: 2px solid #3B5498; border-radius: 4px;
+  cursor: pointer; font-weight: 600;
+}
+.opcoes input:checked + label { background: var(--amarelo); border-color: var(--amarelo); color: var(--azul-esc); }
+.opcoes input:focus-visible + label { outline: 3px solid var(--amarelo); outline-offset: 3px; }
+.marcar { display: flex; align-items: center; gap: 10px; cursor: pointer; font-weight: 600; }
+.marcar input { width: 22px; height: 22px; accent-color: var(--amarelo); }
+
+/* A lista que a calculadora monta: parece uma folha de pedido */
+.lista-pedido {
+  background: var(--branco); color: var(--tinta);
+  border-radius: 4px; padding: 28px 28px 24px;
+  border-top: 8px solid var(--amarelo);
+}
+.lista-pedido h3 { font-size: 1.5rem; margin-bottom: 4px; }
+.lista-pedido .nota { font-size: .9rem; color: var(--aco); margin-bottom: 18px; }
+.lista-pedido table { width: 100%; border-collapse: collapse; margin-bottom: 22px; }
+.lista-pedido td { padding: 10px 0; border-bottom: 1px dashed #CBD1DB; vertical-align: top; }
+.lista-pedido td:first-child {
+  width: 72px; font-stretch: 75%; font-weight: 800; font-size: 1.45rem; line-height: 1.1;
+  color: var(--azul); font-variant-numeric: tabular-nums;
+}
+.lista-pedido td small { display: block; color: var(--aco); font-size: .85rem; }
+.lista-pedido .botao { width: 100%; justify-content: center; }
+
+/* ============================================================
+   POR QUE A TERRA
+   ============================================================ */
+.porque .container { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.porque img { width: 100%; border-radius: 4px; aspect-ratio: 4 / 3; object-fit: cover; }
+.vantagens { list-style: none; padding: 0; margin: 28px 0 0; }
+.vantagens li { padding: 18px 0 18px 44px; border-top: 1px solid var(--concreto); position: relative; }
+.vantagens li::before {
+  content: ""; position: absolute; left: 0; top: 22px;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--amarelo)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2312285E' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12 4 4 8-8'/%3E%3C/svg%3E") center / 15px no-repeat;
+}
+.vantagens strong { display: block; font-size: 1.08rem; }
+.vantagens span { color: var(--aco); }
+
+/* ============================================================
+   COMO COMPRAR
+   ============================================================ */
+.comprar { background: var(--concreto); }
+.comprar .colunas { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px; }
+.comprar .bloco { background: var(--branco); padding: 32px; border-radius: 4px; border-left: 6px solid var(--azul); }
+.comprar .bloco.pf { border-left-color: var(--amarelo); }
+.comprar .bloco p { color: var(--aco); }
+.comprar .bloco .botao { margin-top: 6px; }
+.comprar .pix { display: flex; align-items: center; gap: 10px; margin-top: 28px; color: var(--aco); }
+.comprar .pix img { width: 26px; height: 26px; }
+
+/* ============================================================
+   CONTATO
+   ============================================================ */
+.contato .container { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: stretch; }
+.contato dl { display: grid; grid-template-columns: auto 1fr; gap: 14px 24px; margin: 28px 0 0; }
+.contato dt { font-weight: 700; }
+.contato dd { margin: 0; color: var(--aco); }
+.contato dd a { color: var(--tinta); font-weight: 600; }
+.mapa { min-height: 360px; border-radius: 4px; overflow: hidden; background: var(--concreto); }
+.mapa iframe { width: 100%; height: 100%; min-height: 360px; border: 0; display: block; }
+
+/* ============================================================
+   RODAPÉ + WHATSAPP FLUTUANTE + AVISO DE PRÉVIA
+   ============================================================ */
+.rodape { background: var(--azul-esc); color: #AEB9D6; padding: 36px 0; font-size: .92rem; }
+.rodape .container { display: flex; justify-content: space-between; gap: 12px 32px; flex-wrap: wrap; }
+.rodape a { color: var(--branco); }
+
+.whats-flutuante {
+  position: fixed; right: 18px; bottom: 18px; z-index: 20;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: #25D366; color: #fff; display: grid; place-items: center;
+  box-shadow: 0 10px 24px -8px rgba(0,0,0,.45);
+}
+.whats-flutuante svg { width: 32px; height: 32px; }
+
+/* Remover quando o cliente aprovar o site */
+.aviso-previa { background: var(--amarelo); color: var(--azul-esc); text-align: center; font-size: .88rem; font-weight: 700; padding: 6px 16px; }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* ============================================================
+   TABLET E CELULAR
+   ============================================================ */
+/* Telas médias (notebook pequeno): tira o subtítulo do logo para o menu caber numa linha */
+@media (max-width: 1100px) {
+  .logo small { display: none; }
+  .menu { gap: 20px; }
+}
+.menu a, .topo .botao { white-space: nowrap; }
+
+@media (max-width: 900px) {
+  section { padding: 72px 0; }
+  .menu { display: none; }
+  .produtos { grid-template-columns: repeat(2, 1fr); }
+  .painel-topo,
+  .calculadora .container,
+  .porque .container,
+  .contato .container,
+  .comprar .colunas { grid-template-columns: 1fr; gap: 36px; }
+  .fatos { grid-template-columns: 1fr 1fr; }
+  .fatos li:nth-child(3) { border-left: 0; padding-left: 0; }
+  .hero { padding-top: 80px; }
+}
+@media (max-width: 600px) {
+  .faixa-contato .container { justify-content: center; text-align: center; }
+  .faixa-contato .horario { display: none; }
+  .faixa-contato .telefones { gap: 2px 16px; justify-content: center; }
+  .logo small { display: none; }
+  .logo img { height: 42px; }
+  .topo .botao span { display: none; }
+  .hero { padding: 64px 0 48px; }
+  .fatos { margin-top: 56px; }
+  .fatos li, .fatos li + li { padding: 16px 12px 0 0; border-left: 0; }
+  .aba { font-size: 1rem; padding: .6em .9em; }
+  .produtos { gap: 24px 16px; }
+  .comprar .bloco { padding: 24px; }
+}
