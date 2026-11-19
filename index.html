@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sites sob medida para negócios de São Paulo</title>
+<title>Lodiz Tech · Sites sob medida para negócios de São Paulo</title>
 <meta name="description" content="Sites para salões, barbearias, clínicas e outros negócios de São Paulo. Você recebe uma prévia e só paga depois de ver o site no ar.">
 <meta name="theme-color" content="#f5f3ef">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://sites-project-brown.vercel.app/">
-<meta property="og:title" content="Sites feitos sob medida para negócios de São Paulo">
+<meta property="og:title" content="Lodiz Tech · Sites feitos sob medida para negócios de São Paulo">
 <meta property="og:description" content="Veja projetos para salões, barbearias e clínicas. Você recebe uma prévia e só paga depois de ver o site no ar.">
 <meta property="og:image" content="https://sites-project-brown.vercel.app/assets/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -98,8 +98,11 @@
   .badge-prop { background: #f6e6dd; color: #a3482a; }
 
   /* Card de convite no fim da grade */
-  .next { grid-column: 1 / -1; }
-  .next .stage { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 40px 44px; background: transparent; border: 1.5px dashed #cfc9bf; }
+  .next { display: flex; flex-direction: column; }
+  .next .stage { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 24px; padding: 44px; background: transparent; border: 1.5px dashed #cfc9bf; }
+  /* Com número par de projetos, o convite fica sozinho na última linha: ocupa a largura toda, em linha */
+  .grid > .next:nth-child(odd) { grid-column: 1 / -1; }
+  .grid > .next:nth-child(odd) .stage { flex-direction: row; align-items: center; justify-content: space-between; padding: 40px 44px; }
   .next strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 40px; line-height: 1.05; color: var(--ink); margin-bottom: 8px; }
   .next p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted); }
   .next .btn { flex: none; }
@@ -145,7 +148,7 @@
     .phone { right: 14px; width: 26%; border-width: 4px; border-radius: 16px; }
     .phone img { border-radius: 12px; }
     .meta h2 { font-size: 28px; }
-    .next .stage { flex-direction: column; align-items: flex-start; padding: 28px 24px; }
+    .next .stage, .grid > .next:nth-child(odd) .stage { flex-direction: column; align-items: flex-start; padding: 28px 24px; }
     .next strong { font-size: 34px; }
     .how, .who, .quote { padding: 56px 0; }
     .steps { grid-template-columns: 1fr; gap: 28px; }
@@ -173,9 +176,9 @@
 
 <div class="wrap">
   <header class="top">
-    <div class="brand">portfólio<span>.</span></div>
+    <div class="brand">Lodiz Tech<span>.</span></div>
     <div class="top-right">
-      <div class="count">4 projetos</div>
+      <div class="count">5 projetos</div>
       <a class="btn btn-ghost btn-small" href="https://wa.me/5511991535191?text=Oi!%20Vi%20o%20portf%C3%B3lio%20de%20voc%C3%AAs%20e%20quero%20saber%20mais%20sobre%20um%20site." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Falar no WhatsApp</a>
     </div>
   </header>
@@ -209,6 +212,25 @@
           <h2>DPR Revestimentos — Marmoraria</h2>
           <p>Site institucional de marmoraria em São Paulo, no ar para o cliente.</p>
           <div class="tags"><span>Site institucional</span><span>Portfólio de obras</span><span>Responsivo</span></div>
+        </div>
+        <span class="go">Ver site <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9 9 3M4 3h5v5"/></svg></span>
+      </div>
+    </a>
+
+    <a class="card" href="barbearia/" aria-label="Abrir o site Prumo Barbearia, projeto de demonstração">
+      <div class="stage">
+        <div class="browser">
+          <div class="bar"><i></i><i></i><i></i><span>prumo — barbearia</span></div>
+          <div class="screen"><img src="assets/previews/barbearia-desktop.jpg" alt="Página do site Prumo Barbearia no computador" loading="lazy"></div>
+        </div>
+        <div class="phone"><img src="assets/previews/barbearia-mobile.jpg" alt="Site Prumo Barbearia no celular" loading="lazy"></div>
+      </div>
+      <div class="meta">
+        <div>
+          <span class="badge badge-demo">Projeto de demonstração</span>
+          <h2>Prumo — Barbearia</h2>
+          <p>Site para barbearia com serviços e preços, agendamento pelo WhatsApp e mapa.</p>
+          <div class="tags"><span>Landing page</span><span>Tabela de preços</span><span>Responsivo</span></div>
         </div>
         <span class="go">Ver site <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9 9 3M4 3h5v5"/></svg></span>
       </div>
@@ -322,7 +344,7 @@
   </section>
 
   <footer>
-    <span>© 2026 · Sites para negócios de São Paulo</span>
+    <span>© 2026 Lodiz Tech · Sites para negócios de São Paulo</span>
     <nav aria-label="Contato">
       <a href="https://wa.me/5511991535191" target="_blank" rel="noopener">WhatsApp (11) 99153-5191</a>
       <!-- Para pôr e-mail de contato: <a href="mailto:EMAIL">EMAIL</a> -->

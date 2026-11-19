@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prumo Barbearia — Corte e barba com hora marcada</title>
+<meta name="description" content="Site de demonstração de barbearia feito pela Lodiz Tech: serviços com preço, fotos, como agendar pelo WhatsApp, horário e mapa.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#151414">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23151414'/%3E%3Cpath d='M9 25 23 7M14 25 26 10M6 22 18 7' stroke='%23c4372f' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Prumo Barbearia — site de demonstração">
+<meta property="og:description" content="Exemplo de site para barbearia: serviços com preço, fotos e agendamento pelo WhatsApp.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&h=630&q=70">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--
+  SITE DE DEMONSTRAÇÃO. A Prumo Barbearia não existe: nome, preços, horários e endereço são ilustrativos.
+  As fotos são do Unsplash (licença gratuita) e carregam direto de images.unsplash.com.
+  Os botões de WhatsApp vão para o número da Lodiz Tech (ver script.js).
+-->
+<div class="demo">
+  <p>Site de demonstração da <strong>Lodiz Tech</strong>. Barbearia, preços e fotos são ilustrativos.</p>
+  <a href="#" data-wa="quero">Quero um site assim <span aria-hidden="true">→</span></a>
+</div>
+
+<header class="topo" id="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="#" aria-label="Prumo Barbearia, início">
+      <svg class="marca-icone" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 31 28 9M17 31 31 12M9 27 22 9" stroke="#c4372f" stroke-width="2.6" stroke-linecap="round"/></svg>
+      <span class="marca-texto"><b>PRUMO BARBEARIA</b><small>CORTE E BARBA · PINHEIROS</small></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#servicos">Serviços e preços</a>
+      <a href="#espaco">O espaço</a>
+      <a href="#agendar">Como agendar</a>
+      <a href="#contato">Contato</a>
+      <a class="btn btn-claro menu-cta" href="#" data-wa="agendar">Agendar</a>
+    </nav>
+    <button class="menu-botao" id="menu-botao" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <img class="hero-foto" src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=2000&q=70" srcset="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=900&q=70 900w, https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1400&q=70 1400w, https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=2000&q=70 2000w" sizes="100vw" alt="Salão da barbearia com três cadeiras de couro, espelhos e parede de tijolos" fetchpriority="high">
+    <div class="wrap hero-in">
+      <div class="hero-topo">
+        <p class="olho olho-claro">Barbearia em São Paulo · Com hora marcada</p>
+        <h1>Corte bem feito, no seu horário.</h1>
+        <p class="hero-sub">Cabelo, barba e acabamento com calma, sem fila na porta.</p>
+      </div>
+      <div class="hero-base">
+        <p>Você escolhe o serviço, marca pelo WhatsApp e chega na hora. A cadeira já está esperando por você.</p>
+        <div class="acoes">
+          <a class="btn btn-claro" href="#" data-wa="agendar">Agendar pelo WhatsApp</a>
+          <a class="link-seta link-claro" href="#servicos">Ver preços <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="legenda">
+    <div class="wrap">Salão principal, com três cadeiras. Foto: Nathon Oski / Unsplash</div>
+  </div>
+
+  <section class="numeros" aria-label="Destaques">
+    <div class="numeros-in">
+      <div><strong>Hora marcada</strong><span>Sem fila e sem espera</span></div>
+      <div><strong>Corte + barba</strong><span>Em cerca de 1 hora</span></div>
+      <div><strong>Pix e cartão</strong><span>Pagamento na hora</span></div>
+      <div><strong>Segunda a sábado</strong><span>Até as 20h durante a semana</span></div>
+    </div>
+  </section>
+
+  <section class="secao" id="trabalhos">
+    <div class="wrap">
+      <div class="secao-cab">
+        <div>
+          <p class="olho">Trabalhos</p>
+          <h2>O que sai da nossa cadeira,<br> do jeito que você pediu.</h2>
+        </div>
+        <a class="link-seta" href="#" data-wa="agendar">Quero um desses <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="carrossel" id="carrossel" tabindex="0" aria-label="Fotos de cortes e barbas">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1672642150228-3fcd5826ec26?auto=format&fit=crop&w=900&q=70" alt="Barbeiro fazendo degradê na lateral da cabeça com máquina" loading="lazy">
+          <figcaption><b>Degradê</b><span>Máquina e acabamento na navalha</span></figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1647140655214-e4a2d914971f?auto=format&fit=crop&w=900&q=70" alt="Barbeiro cortando o topo do cabelo com pente e tesoura" loading="lazy">
+          <figcaption><b>Corte na tesoura</b><span>Topo na tesoura, laterais na máquina</span></figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=70" alt="Cliente reclinado na cadeira enquanto o barbeiro apara a barba" loading="lazy">
+          <figcaption><b>Barba completa</b><span>Toalha quente, navalha e hidratação</span></figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=900&q=70" alt="Barbeiro aparando barba cheia com tesoura, em preto e branco" loading="lazy">
+          <figcaption><b>Barba desenhada</b><span>Tesoura, pente e contorno</span></figcaption>
+        </figure>
+      </div>
+      <div class="controles">
+        <button class="seta" type="button" id="ant" aria-label="Fotos anteriores">←</button>
+        <button class="seta" type="button" id="prox" aria-label="Próximas fotos">→</button>
+        <span class="contador" id="contador" aria-live="polite">1–2 de 4</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="escuro" id="servicos">
+    <div class="wrap">
+      <p class="olho">Serviços e preços</p>
+      <h2>Cortamos, aparamos, desenhamos e cuidamos.</h2>
+      <p class="sub-serif">Preço na tela, sem surpresa no caixa</p>
+      <p class="texto-curto">Cada serviço tem tempo reservado só para você. Se quiser mudar o visual, conte na hora de agendar e a gente separa um horário mais longo.</p>
+      <a class="btn btn-claro" href="#" data-wa="agendar">Agendar um horário</a>
+
+      <ul class="lista-servicos">
+        <li><div><h3>Corte de cabelo</h3><p>Tesoura ou máquina, com lavagem</p></div><span class="preco">R$ 50</span></li>
+        <li><div><h3>Barba</h3><p>Toalha quente, navalha e hidratação</p></div><span class="preco">R$ 40</span></li>
+        <li><div><h3>Corte + barba</h3><p>O combo mais pedido</p></div><span class="preco">R$ 80</span></li>
+        <li><div><h3>Pezinho e sobrancelha</h3><p>Acabamento entre um corte e outro</p></div><span class="preco">R$ 20</span></li>
+        <li><div><h3>Pigmentação</h3><p>Barba ou cabelo</p></div><span class="preco">R$ 40</span></li>
+        <li><div><h3>Corte infantil</h3><p>Até 12 anos</p></div><span class="preco">R$ 40</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="secao" id="espaco">
+    <div class="wrap">
+      <div class="secao-cab secao-cab-texto">
+        <div>
+          <p class="olho">O espaço</p>
+          <h2>Feito para você sentar<br> e relaxar.</h2>
+        </div>
+        <p>Café passado na hora, ar-condicionado e Wi&#8209;Fi. Se chegar antes do horário, a espera é confortável.</p>
+      </div>
+      <div class="grade-espaco">
+        <figure><img src="https://images.unsplash.com/photo-1702865272115-5afdbae975af?auto=format&fit=crop&w=800&q=70" alt="Cadeira de barbeiro de couro marrom acolchoado" loading="lazy"><figcaption>Cadeiras de couro</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=70" alt="Máquinas de corte, tesouras, pente e pomadas sobre uma pedra escura" loading="lazy"><figcaption>Ferramentas esterilizadas</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1621645582931-d1d3e6564943?auto=format&fit=crop&w=800&q=70" alt="Fileira de cadeiras de barbeiro clássicas em salão com piso de madeira" loading="lazy"><figcaption>Salão climatizado</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao secao-borda" id="agendar">
+    <div class="wrap">
+      <p class="olho">Como agendar</p>
+      <h2>Quatro passos, sem fila na porta.</h2>
+      <ol class="passos">
+        <li><span class="num">01</span><div><h3>Escolha o serviço</h3><p>Veja os preços acima e decida se é corte, barba ou os dois.</p></div></li>
+        <li><span class="num">02</span><div><h3>Chame no WhatsApp</h3><p>Mande o serviço e o melhor dia. Quem responde é a nossa equipe, não um robô.</p></div></li>
+        <li><span class="num">03</span><div><h3>Confirme o horário</h3><p>A gente passa os horários livres e você escolhe. Na véspera, mandamos um lembrete.</p></div></li>
+        <li><span class="num">04</span><div><h3>Chegue e sente na cadeira</h3><p>Chegou no horário, já começa. Pagamento por Pix ou cartão.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="escuro contato" id="contato">
+    <div class="wrap">
+      <h2>Marque seu horário<br> ou passe para um café.</h2>
+      <a class="btn btn-claro" href="#" data-wa="agendar">Agendar pelo WhatsApp</a>
+      <p class="horarios"><b>Horários:</b> Segunda a sexta, das 9h às 20h · Sábado, das 9h às 18h</p>
+      <p class="status" id="status"><i></i><span>Segunda a sábado, a partir das 9h.</span></p>
+      <div class="endereco">
+        <p>Rua dos Pinheiros · Pinheiros, São Paulo/SP</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Pinheiros%2C%20S%C3%A3o%20Paulo" target="_blank" rel="noopener">Abrir no Google Maps</a>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa de Pinheiros, São Paulo" src="https://www.google.com/maps?q=Pinheiros,+S%C3%A3o+Paulo&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rodape-grade">
+      <div class="rodape-sobre">
+        <a class="marca" href="#" aria-label="Prumo Barbearia, voltar ao topo">
+          <svg class="marca-icone" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 31 28 9M17 31 31 12M9 27 22 9" stroke="#c4372f" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <span class="marca-texto"><b>PRUMO BARBEARIA</b><small>CORTE E BARBA · PINHEIROS</small></span>
+        </a>
+        <p>Corte, barba e acabamento com hora marcada. Atendimento sem pressa, do jeito que você pediu.</p>
+      </div>
+      <nav aria-label="Site">
+        <p class="olho">Site</p>
+        <a href="#trabalhos">Trabalhos</a>
+        <a href="#servicos">Serviços e preços</a>
+        <a href="#espaco">O espaço</a>
+        <a href="#agendar">Como agendar</a>
+      </nav>
+      <nav aria-label="Serviços">
+        <p class="olho">Serviços</p>
+        <a href="#servicos">Corte de cabelo</a>
+        <a href="#servicos">Barba</a>
+        <a href="#servicos">Corte + barba</a>
+        <a href="#servicos">Pigmentação</a>
+      </nav>
+      <div>
+        <p class="olho">Contato</p>
+        <a href="#" data-wa="agendar">WhatsApp</a>
+        <p>Rua dos Pinheiros, Pinheiros, São Paulo/SP</p>
+        <p class="pequeno">Segunda a sexta, das 9h às 20h · Sábado, das 9h às 18h</p>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <p>Site de demonstração criado pela <a href="../">Lodiz Tech</a>. Fotos: Nathon Oski, Redd Francisco, Nate Johnston, Allef Vinicius, Andrea Donato e Joshua Lawrence, via <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</p>
+      <a href="../">Ver outros projetos</a>
+    </div>
+  </div>
+</footer>
+
+<a class="whats" href="#" data-wa="agendar" aria-label="Agendar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.24 8.24 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.06 0 1.22.89 2.39 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg></a>
+
+<script src="script.js"></script>
+</body>
+</html>

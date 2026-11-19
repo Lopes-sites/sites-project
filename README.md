@@ -6,6 +6,7 @@ Portfólio de sites estáticos (HTML, CSS e JS, sem build). Cada site fica em um
 |---|---|
 | [`aura/`](aura/) | Aura — Estúdio de beleza |
 | [`clara/`](clara/) | Clara — Dermatologia |
+| [`barbearia/`](barbearia/) | Prumo — Barbearia. Demonstração (barbearia fictícia, fotos do Unsplash carregadas direto de images.unsplash.com, botões de WhatsApp para a Lodiz Tech) |
 | [`colchoes-terra/`](colchoes-terra/) | Colchões Terra — Móveis para alojamento de obra |
 | (externo) [dprrevestimentos.com.br](https://www.dprrevestimentos.com.br/) | DPR Revestimentos — Marmoraria. Site de cliente em produção (Next.js, repositório próprio); aqui só o card e as capturas |
 
